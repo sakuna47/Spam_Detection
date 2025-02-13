@@ -1,91 +1,64 @@
-Spam Detection Web App
+# Fake News Detection System
 
-Overview
+## Overview
+This project is a **Fake News Detection System** that classifies news articles as either **Real** or **Fake** using **Natural Language Processing (NLP)** and **Machine Learning**. It includes:
+- A **Jupyter Notebook** for training a **Logistic Regression** model using **TF-IDF** feature extraction.
+- A **Streamlit Web App** for users to input news articles and get real-time predictions.
 
-This project is a Spam Detection Web App built using Python, Scikit-Learn, NLTK, and Streamlit. The model uses Natural Language Processing (NLP) techniques and Machine Learning to classify messages as either spam or ham (not spam).
+## Features
+- **Text Preprocessing**: Converts text to lowercase, removes special characters, stems words, and eliminates stopwords.
+- **TF-IDF Vectorization**: Extracts the top 5000 most important words.
+- **Machine Learning Model**: Logistic Regression classifier for accurate predictions.
+- **Model Deployment**: A **Streamlit** web app to check if a news article is real or fake.
 
-Features
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/fake-news-detection.git
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Download NLTK stopwords:
+   ```python
+   import nltk
+   nltk.download('stopwords')
+   ```
+4. Run the Streamlit app:
+   ```bash
+   streamlit run app.py
+   ```
 
-Text Preprocessing: Converts messages to lowercase, removes stopwords, and filters special characters.
+## Usage
+1. Train the model using the Jupyter Notebook (`fake_news_detection.ipynb`).
+2. Save the trained model and vectorizer.
+3. Run `app.py` and enter a news article to check its authenticity.
 
-TF-IDF Vectorization: Transforms text data into numerical vectors for machine learning.
+## Dataset
+- **Real News**: Sourced from legitimate news websites.
+- **Fake News**: Collected from unreliable sources.
+- Both datasets are labeled (`0 = Real`, `1 = Fake`).
 
-Naïve Bayes Classification: A trained Multinomial Naïve Bayes model to detect spam.
+## Technologies Used
+- **Python**
+- **Pandas, NumPy, Scikit-Learn** (for data processing & ML)
+- **NLTK** (for text preprocessing)
+- **Matplotlib, Seaborn** (for data visualization)
+- **Streamlit** (for web app deployment)
 
-Web Interface: A Streamlit-based UI where users can enter a message and get a classification result.
+## Results
+- Model Accuracy: **~95%**
+- **Confusion Matrix & Classification Report** provided in the notebook.
 
-Model Persistence: The trained model and vectorizer are saved using Pickle for reuse.
+## Future Improvements
+- Improve model with deep learning (**LSTM, BERT**).
+- Add multilingual support for news detection.
+- Deploy as a cloud-based API for broader use.
 
-Google Drive Integration: Loads dataset and saves model files directly on Google Drive.
+## Contributors
+- **Your Name** ([GitHub](https://github.com/yourusername))
 
-Tech Stack
+## License
+This project is open-source under the **MIT License**.
 
-Python (pandas, numpy, nltk, scikit-learn, pickle)
-
-Machine Learning (TF-IDF, Naïve Bayes classifier)
-
-Natural Language Processing (NLP)
-
-Streamlit (for web interface)
-
-Flask (for backend deployment, if needed)
-
-Installation & Setup
-
-Clone the repository
-
-git clone https://github.com/your-username/spam-detection-web-app.git
-cd spam-detection-web-app
-
-Install dependencies
-
-pip install pandas numpy scikit-learn nltk flask streamlit
-
-Download NLTK stopwords
-
-import nltk
-nltk.download("stopwords")
-
-Run the Streamlit Web App
-
-streamlit run app.py
-
-Usage
-
-Enter a text message in the web app.
-
-Click Predict to classify the message as spam or ham.
-
-The model will provide an instant prediction.
-
-Dataset
-
-The dataset is loaded from a CSV file stored in Google Drive. It contains labeled messages categorized as spam or ham.
-
-Model Training
-
-The dataset is preprocessed by removing stopwords and special characters.
-
-Text data is transformed using TF-IDF Vectorization.
-
-A Multinomial Naïve Bayes model is trained for classification.
-
-The model and vectorizer are saved using Pickle.
-
-Future Improvements
-
-Expand dataset for better accuracy.
-
-Improve text preprocessing with lemmatization.
-
-Deploy using Flask & Docker for a production-ready API.
-
-Implement Deep Learning models for better classification.
-
-Contributors
-
-Your Name (GitHub Profile)
-
-License
-
-This project is licensed under the MIT License.
