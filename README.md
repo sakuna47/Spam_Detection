@@ -14,7 +14,7 @@ This project is a **Fake News Detection System** that classifies news articles a
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/sakyna47/Spam_Detection
+   git clone https://github.com/sakuna47/Spam_Detection
    ```
 2. Install dependencies:
    ```bash
